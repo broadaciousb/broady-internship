@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import AuthorImage from "../../images/author_thumbnail.jpg";
-import nftImage from "../../images/nftImage.jpg";
 import axios from "axios";
 import Slider from "react-slick";
 
@@ -46,7 +44,7 @@ const HotCollections = () => {
     );
 
     await setAuthors(data);
-    //setLoading(false);
+    setLoading(false);
   }
 
   useEffect(() => {

@@ -29,7 +29,7 @@
 }
 
 @keyframes shimmer {
-  to {
+  100% {
     transform: translateX(100%);
   }
   
@@ -39,7 +39,9 @@
 .author__img--loading-skeleton,
 .author__title--skeleton,
 .author__code--skeleton {
-  background: #dddbdd;
+  background-color: #dddbdd;
+  position: relative;
+  display: inline-block;
 }
 
 .nft--loading-skeleton::after,
@@ -50,7 +52,13 @@
   background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0),
     hsla(0, 0%, 100%, 0.2) 20%, hsla(0, 0%, 100%, 0.5) 60%,
     hsla(0, 0%, 100%, 0));
+    content: "";
     position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
     transform: translateX(-100%);
 }
 
