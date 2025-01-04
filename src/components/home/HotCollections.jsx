@@ -49,7 +49,6 @@ const HotCollections = () => {
 
   useEffect(() => {
     getData();
-
   }, []);
 
   return (
