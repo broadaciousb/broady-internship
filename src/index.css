@@ -12,5 +12,132 @@
 @import "./css/styles/coloring.css";
 
 
+/* HOT COLLECTION CAROUSEL AND BUTTONS */
 
+.slider-container {
+  position: relative;
+}
+
+.slick-slide > div {
+  margin: 0 5px;
+}
+
+.slider-button {
+  color: black;
+  font-size: 24px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: solid 1px #dddddd;
+  background-color: white;
+  position: absolute;
+  cursor: pointer;
+}
+
+.prev-button {
+  top: 50%;
+  left: 0;
+}
+
+.next-button {
+  top: 50%;
+  right: 0;
+}
+
+
+
+
+
+
+/* LOADING SKELETONS */
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+.nft--loading-skeleton,
+.author__img--loading-skeleton,
+.author__title--skeleton,
+.author__code--skeleton,
+.loading-background,
+.new-item__title-skeleton,
+.new-item__price-skeleton,
+.new-item__likes-skeleton {
+  background-color: #dddbdd;
+  position: relative;
+  display: inline-block;
+}
+
+.nft--loading-skeleton::after,
+.author__img--loading-skeleton::after,
+.author__title--skeleton:after,
+.author__code--skeleton::after,
+.loading-background:after,
+.new-item__title-skeleton:after,
+.new-item__price-skeleton:after,
+.new-item__likes-skeleton:after {
+  animation: shimmer 2s infinite;
+  background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0),
+    hsla(0, 0%, 100%, 0.2) 20%, hsla(0, 0%, 100%, 0.5) 60%,
+    hsla(0, 0%, 100%, 0));
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+    transform: translateX(-100%);
+}
+
+.author__img--loading-skeleton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.author__info--skeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.author__title--skeleton {
+  height: 16px;
+  width: 40%;
+  margin-bottom: 12px;
+}
+
+.author__code--skeleton {
+  height: 14px;
+  width: 20%;
+}
+
+.loading-background {
+  background-color: #dddbdd;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.new-item__title-skeleton {
+  height: 20px;
+  width: 60%;
+  margin: 8px 0;
+}
+
+.new-item__price-skeleton {
+  height: 20px;
+  width: 30%;
+}
+
+.new-item__likes-skeleton {
+  width: 18px;
+  height: 18px;
+}
 
