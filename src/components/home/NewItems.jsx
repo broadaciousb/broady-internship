@@ -60,7 +60,6 @@ const NewItems = () => {
     );
 
     await setNewNfts(data);
-    console.log(newNfts);
     setLoading(false);
   }
 
