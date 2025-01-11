@@ -86,8 +86,8 @@ const NewItems = () => {
           <div className="slider-container">
             <Slider ref={arrowRef} {...sliderSettings}>
               {loading
-                ? new Array(7).fill(0).map((nft) => (
-                    <div className="" key={nft.id}>
+                ? new Array(7).fill(0).map((_, index) => (
+                    <div className="" key={index}>
                       <div className="nft__item">
                         <div className="author_list_pp">
                           <div className="author__img--loading-skeleton"></div>
@@ -122,7 +122,7 @@ const NewItems = () => {
                             <div className="new-item__price-skeleton"></div>
                           </div>
                           <div className="nft__item_like">
-                          <div className="new-item__likes-skeleton"></div>
+                            <div className="new-item__likes-skeleton"></div>
                           </div>
                         </div>
                       </div>
@@ -192,20 +192,18 @@ const NewItems = () => {
                     </div>
                   ))}
             </Slider>
-            <buttons>
-              <button
-                className="slider-button prev-button"
-                onClick={() => arrowRef.current.slickPrev()}
-              >
-                {"<"}
-              </button>
-              <button
-                className="slider-button next-button"
-                onClick={() => arrowRef.current.slickNext()}
-              >
-                {">"}
-              </button>
-            </buttons>
+            <button
+              className="slider-button prev-button"
+              onClick={() => arrowRef.current.slickPrev()}
+            >
+              {"<"}
+            </button>
+            <button
+              className="slider-button next-button"
+              onClick={() => arrowRef.current.slickNext()}
+            >
+              {">"}
+            </button>
           </div>
         </div>
       </div>
