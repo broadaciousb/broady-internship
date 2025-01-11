@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 
-
 const sliderSettings = {
   dots: false,
   arrows: false,
@@ -64,18 +63,18 @@ const HotCollections = () => {
           <div className="slider-container">
             <Slider ref={arrowRef} {...sliderSettings}>
               {loading
-                ? new Array(6).fill(0).map((author) => (
-                    <div className="" key={author.id}>
+                ? new Array(6).fill(0).map((_, index) => (
+                    <div className="" key={index}>
                       <div className="nft_coll">
-                        <div className="nft_wrap nft--loading-skeleton"></div>
+                        <div className="nft_wrap nft--loading-skeleton loading-state"></div>
                         <div className="nft_coll_pp">
-                          <div className="author__img--loading-skeleton"></div>
+                          <div className="author__img--loading-skeleton loading-state"></div>
                           <i className="fa fa-check"></i>
                         </div>
                         <div className="nft_coll_info">
                           <div className="author__info--skeleton">
-                            <div className="author__title--skeleton"></div>
-                            <div className="author__code--skeleton"></div>
+                            <div className="author__title--skeleton loading-state"></div>
+                            <div className="author__code--skeleton loading-state"></div>
                           </div>
                         </div>
                       </div>
@@ -113,20 +112,18 @@ const HotCollections = () => {
                     </div>
                   ))}
             </Slider>
-            <buttons>
-              <button
-                className="slider-button prev-button"
-                onClick={() => arrowRef.current.slickPrev()}
-              >
-                {"<"}
-              </button>
-              <button
-                className="slider-button next-button"
-                onClick={() => arrowRef.current.slickNext()}
-              >
-                {">"}
-              </button>
-            </buttons>
+            <button
+              className="slider-button prev-button"
+              onClick={() => arrowRef.current.slickPrev()}
+            >
+              {"<"}
+            </button>
+            <button
+              className="slider-button next-button"
+              onClick={() => arrowRef.current.slickNext()}
+            >
+              {">"}
+            </button>
           </div>
         </div>
       </div>
