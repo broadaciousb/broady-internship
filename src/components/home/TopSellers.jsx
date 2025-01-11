@@ -15,7 +15,6 @@ async function getSellers() {
 
   await setTopSellers(data);
   setLoading(false);
-  console.log(topSellers);
 }
 
 useEffect(() => {
@@ -38,12 +37,12 @@ useEffect(() => {
                 ? new Array(12).fill(0).map((_, index) => (
                 <li key={index}>
                   <div className="author_list_pp">
-                      <div className="author__img--loading-skeleton"></div>
+                      <div className="author__img--loading-skeleton loading-state"></div>
                       <i className="fa fa-check"></i>
                   </div>
                   <div className="author_list_info">
-                    <div className="top-seller__author--name"></div>
-                    <div className="top-seller__price"></div>
+                    <div className="top-seller__author-name--skeleton loading-state"></div>
+                    <div className="top-seller__price--skeleton loading-state"></div>
                   </div>
                 </li>))
                 

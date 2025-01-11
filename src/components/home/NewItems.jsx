@@ -90,7 +90,7 @@ const NewItems = () => {
                     <div className="" key={index}>
                       <div className="nft__item">
                         <div className="author_list_pp">
-                          <div className="author__img--loading-skeleton"></div>
+                          <div className="author__img--loading-skeleton loading-state"></div>
                           <i className="fa fa-check"></i>
                         </div>
 
@@ -112,17 +112,17 @@ const NewItems = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="loading-background"></div>
+                          <div className="loading-background loading-state"></div>
                         </div>
                         <div className="nft__item_info">
                           <Link to="/item-details">
-                            <div className="new-item__title-skeleton"></div>
+                            <div className="new-item__title-skeleton loading-state"></div>
                           </Link>
                           <div className="nft__item_price">
-                            <div className="new-item__price-skeleton"></div>
+                            <div className="new-item__price-skeleton loading-state"></div>
                           </div>
                           <div className="nft__item_like">
-                            <div className="new-item__likes-skeleton"></div>
+                            <div className="new-item__likes-skeleton loading-state"></div>
                           </div>
                         </div>
                       </div>
