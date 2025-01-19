@@ -90,7 +90,7 @@ const HotCollections = () => {
                     </div>
                   ))
                 : authors.map((author) => (
-                    <div className="" key={author.id}>
+                    <div className="" key={author.authorId}>
                       <div className="nft_coll">
                         <div className="nft_wrap">
                           <Link to="/item-details">
@@ -102,7 +102,7 @@ const HotCollections = () => {
                           </Link>
                         </div>
                         <div className="nft_coll_pp">
-                          <Link to="/author">
+                          <Link to={`/author/${author.authorId}`}>
                             <img
                               className="lazy pp-coll"
                               src={author.authorImage}

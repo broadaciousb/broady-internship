@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useNavigate } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import NftCard from "../NftCard.jsx";
@@ -20,6 +20,7 @@ const ExploreItems = () => {
     );
 
     await setNfts(data);
+    console.log(nfts);
     setLoading(false);
   }
 
@@ -43,6 +44,7 @@ const ExploreItems = () => {
   useEffect(() => {
     getNfts();
   }, []);
+
 
   return (
     <>
@@ -71,6 +73,7 @@ const ExploreItems = () => {
               <NftCard
                 classes={classNames}
                 nftId={nft.nftId}
+                authorId={nft.authorId}
                 authorImg={nft.authorImage}
                 exp={nft.expiryDate}
                 nftImg={nft.nftImage}

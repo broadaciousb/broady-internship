@@ -88,6 +88,7 @@ const NewItems = () => {
                   <NftCard
                   classes={classNames}
                   nftId={nft.nftId}
+                  authorId={nft.authorId}
                   authorImg={nft.authorImage}
                   exp={nft.expiryDate}
                   nftImg={nft.nftImage}

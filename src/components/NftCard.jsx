@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Countdown from "./Countdown";
 
-const NftCard = ({classes, nftId, authorImg, exp, nftImg, title, price, likes}) => {
+const NftCard = ({classes, nftId, authorId, authorImg, exp, nftImg, title, price, likes}) => {
+  
 
   return (
     <div
@@ -12,7 +13,7 @@ const NftCard = ({classes, nftId, authorImg, exp, nftImg, title, price, likes}) 
     >
       <div className="nft__item">
         <div className="author_list_pp">
-          <Link to="/author" data-bs-toggle="tooltip" data-bs-placement="top">
+          <Link to={`/author/${authorId}`} data-bs-toggle="tooltip" data-bs-placement="top">
             <img className="lazy" src={authorImg} alt="" />
             <i className="fa fa-check"></i>
           </Link>
