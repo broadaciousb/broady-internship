@@ -3,6 +3,8 @@ import axios from "axios";
 import Slider from "react-slick";
 import NftCard from "../NftCard.jsx";
 import NftSkeleton from "../NftSkeleton.jsx";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const sliderSettings = {
   dots: false,
@@ -66,10 +68,15 @@ const NewItems = () => {
 
   useEffect(() => {
     getData();
+    AOS.init({
+            duration: 2000,
+            delay: 300,
+            once: true
+          });
   }, []);
 
   return (
-    <section id="section-items" className="no-bottom">
+    <section id="section-items" className="no-bottom" data-aos="fade-up">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

@@ -4,6 +4,7 @@ import axios from "axios";
 import NftCard from "../NftCard.jsx";
 import NftSkeleton from "../NftSkeleton.jsx";
 
+
 const classNames = "col-lg-3 col-md-6 col-sm-6 col-xs-12";
 
 const ExploreItems = () => {
@@ -20,7 +21,6 @@ const ExploreItems = () => {
     );
 
     await setNfts(data);
-    console.log(nfts);
     setLoading(false);
   }
 

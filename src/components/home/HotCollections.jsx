@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 import Skeleton from "../UI/Skeleton.jsx";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const sliderSettings = {
   dots: false,
@@ -49,10 +51,15 @@ const HotCollections = () => {
 
   useEffect(() => {
     getData();
+    AOS.init({
+            duration: 2000,
+            delay: 300,
+            once: true
+          });
   }, []);
 
   return (
-    <section id="section-collections" className="no-bottom">
+    <section id="section-collections" className="no-bottom" data-aos="fade-up">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
