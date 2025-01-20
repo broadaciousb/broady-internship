@@ -21,7 +21,7 @@ const AuthorItems = ({ author, authorNfts, loading }) => {
           : authorNfts.map((nft) => (
             <NftCard
                 classes={classNames}
-                nftId={nft.Id}
+                nftId={nft.nftId}
                 authorImg={author.authorImage}
                 nftImg={nft.nftImage}
                 title={nft.title}

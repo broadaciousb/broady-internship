@@ -38,12 +38,12 @@ const NftCard = ({classes, nftId, authorId, authorImg, exp, nftImg, title, price
               </div>
             </div>
           </div>
-          <Link to="/item-details">
+          <Link to={`/item-details/${nftId}`}>
             <img src={nftImg} className="lazy nft__item_preview" alt="" />
           </Link>
         </div>
         <div className="nft__item_info">
-          <Link to="/item-details">
+          <Link to={`/item-details/${nftId}`}>
             <h4>{title}</h4>
           </Link>
           <div className="nft__item_price">{price} ETH</div>
