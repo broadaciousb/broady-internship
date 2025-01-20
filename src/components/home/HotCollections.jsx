@@ -46,6 +46,7 @@ const HotCollections = () => {
     );
 
     await setAuthors(data);
+    console.log(authors);
     setLoading(false);
   }
 
@@ -100,7 +101,7 @@ const HotCollections = () => {
                     <div className="" key={author.authorId}>
                       <div className="nft_coll">
                         <div className="nft_wrap">
-                          <Link to="/item-details">
+                          <Link to={`/item-details/${author.nftId}`}>
                             <img
                               src={author.nftImage}
                               className="lazy img-fluid"
